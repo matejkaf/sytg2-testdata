@@ -1,0 +1,83 @@
+\documentclass[11pt,a4paper]{exam}
+
+\def\myTestKlasse{1AHITS}
+\def\myTestBezeichnung{Test}
+\def\myTestNummer{1} % bei 0 keine Anzeige
+\def\myTestDatum{15.10.2019}
+\def\myTestWiederholung{1} % 1=erster Test - keine Anzeige
+\def\myTestFach{FSST}
+\def\myTestLanguage{c++}
+\def\myTestZeigeNoten{24} % 8, 15, 24, 30 oder 100
+\def\myTestZeigePunktetabelle{no} % yes/no
+\def\myTestName{noname} % noname oder Schülername
+
+%\printanswers		%% Gibt die Antworten aus 
+
+\input{../../TestHeader.tex}
+
+\pagestyle{head}
+
+\header{ \myTestHeader{\myTestBezeichnung}{\myTestNummer}{\myTestDatum}{\myTestWiederholung}{\myTestFach}{\myTestKlasse}{\myTestName} }{}{}
+
+\lstset{language=java}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\myTestWarnung
+
+
+\begin{questions}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\renewcommand{\questionlabel}{}
+\question[1]
+Lesbarkeitspunkt ($-1$P bei falscher Katalognummer oder Namensnennung)
+\setcounter{question}{0}
+\renewcommand{\questionlabel}{\thequestion.}
+
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\question
+Schreibe ein vollständiges Programm für folgende Aufgabenstellung:
+Eingabe eines Winkels in Grad (als Kommazahl), Umrechnung nach Radiant mit Ausgabe des Ergebnisses mit genau 2 Kommastellen. 
+Umrechnungsformel:
+\[radiant = \frac{grad \cdot 3,14}{180}\]
+
+Die Ausgabe soll folgendermaßen aussehen (Statt der Unterstriche ist der eingegebene Winkel in Grad und der berechnete Winkel im Radianten auszugeben):
+\begin{Verbatim}[frame=single]
+__ Grad sind __ als Radiant
+\end{Verbatim}
+
+
+Punkteverteilung:
+\begin{parts}
+\part[8] Korrektheit des Programmtexts.
+\part[2] Variablendefinition.
+\part[5] Eingabe mit Benutzerführung.
+\part[4] Berechnung des Radianten.
+\part[4] Ausgabe des Ergebnisses.
+\end{parts}
+
+
+\drawGrid
+
+%--------------------------------------------------------------------------------
+\end{questions}
+
+%\vspace*{\fill}
+\myTestPunktetabelle
+
+\myTestNotenschluessel
+%\textbf{Viel Erfolg!}
+
+
+
+
+
+
+\end{document}
+
